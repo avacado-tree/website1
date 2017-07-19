@@ -8,10 +8,21 @@
   <title>My page</title>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    <script>
-   $(document).ready(function() {
-    $('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
-    $('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
-});
+   window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+}
 </script>
     </head>
   <body>
@@ -38,7 +49,7 @@
 </nav>
   <div class="jumbotron text-center">
    <div class="container">
-  <h2> Start your search here</h2>
+  <h1> Start Your Search Here</h1>
   <form class="form-inline">
     <div class="input-group">
       <input type="search" class="form-control" id="search-box" size="70" placeholder="Search stores..." required>
@@ -50,15 +61,9 @@
   </div>
   </div>
   
+  <h2> Popular Items</h2></div>
+  
   <div class="container">
-    <div class="well well-sm">
-        <strong>Display</strong>
-        <div class="btn-group">
-            <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
-            </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
-                class="glyphicon glyphicon-th"></span>Grid</a>
-        </div>
-    </div>
     <div id="products" class="row list-group">
         <div class="item  col-xs-4 col-lg-4">
             <div class="thumbnail">
@@ -75,7 +80,7 @@
                                 $21.000</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                            <a class="btn btn-success" data-toggle="modal" data-target="#myModal">Add to cart</a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +101,7 @@
                                 $21.000</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                            <a class="btn btn-success" data-toggle="modal" data-target="#myModal">Add to cart</a>
                         </div>
                     </div>
                 </div>
@@ -117,7 +122,7 @@
                                 $21.000</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                            <a class="btn btn-success" data-toggle="modal" data-target="#myModal">Add to cart</a>
                         </div>
                     </div>
                 </div>
@@ -138,7 +143,7 @@
                                 $21.000</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                            <a class="btn btn-success" data-toggle="modal" data-target="#myModal">Add to cart</a>
                         </div>
                     </div>
                 </div>
@@ -159,7 +164,7 @@
                                 $21.000</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                            <a class="btn btn-success" data-toggle="modal" data-target="#myModal">Add to cart</a>
                         </div>
                     </div>
                 </div>
@@ -180,7 +185,27 @@
                                 $21.000</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                            <a class="btn btn-success" data-toggle="modal" data-target="#myModal">Add to cart</a>
+							<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
                         </div>
                     </div>
                 </div>
@@ -189,11 +214,8 @@
     </div>
 </div>
 
-  
-  <footer class="text-center">
-  <a class="up-arrow" href="http://localhost/git.php" data-toggle="tooltip" title="TO TOP">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a><br><br>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <footer>
 </footer>
 
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
