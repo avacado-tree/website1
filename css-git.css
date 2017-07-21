@@ -1,0 +1,140 @@
+body{
+	background-color:#F7F7F7;
+}
+.jumbotron { 
+  background-color:#2d2d30; 
+  color:white;
+  margin-top:40px;
+
+ 
+}
+
+ .form-control, search-box, button{
+	 height:50px;
+ }
+
+ h2 {
+	 margin-top: 50px;
+	 padding-left:110px;
+	 color:gray;
+	 
+ }
+
+.item.list-group-item
+{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 0px;
+}
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
+{
+    background: #428bca;
+}
+
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+}
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
+}
+.item.list-group-item:nth-of-type(odd)
+{
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img
+{
+    float: left;
+}
+.item.list-group-item:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}
+.modal-content{
+	margin-top: 100px; /* styles the box itself*/
+}
+.modal-title{
+	padding-top:15px; /* styles the header with a proper line-height*/
+	font-size: 22px;
+}
+.modal-footer{
+	border-top:none;
+	padding-top:40px;
+}
+
+.logo {
+    font-size: 100px;
+	color:#2d2d30;
+	
+}
+#paragraphs {
+	margin-top: 50px;
+	margin-bottom:30px;
+}
+
+/*carousel*/
+.carousel1{
+	margin-bottom:30px;
+	margin-top:50px;
+}
+/*makes carousel images responsive 	background: rgba(0,0,0,0.5);*/
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  max-height:350px;
+}
+.carousel.slide img {
+    width:100%;
+    height:auto;
+	margin-top:0px;
+}
+
+footer {
+	height:100px;
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+	margin-bottom:0px;
+	margin-top:60px;
+}
+/* to top button */
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgba(0, 0, 0, 0.5); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
